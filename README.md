@@ -1,6 +1,6 @@
 # Bloco de Notas Dark 
 
-![Preview](Minimalist_3D_Notebook_Icon_On_Soft_Peach_And_Blue_Background-removebg-preview.png)  
+![Preview](preview/tela01.png)  
 *Uma aplicação minimalista para registrar suas ideias com estilo!*
 
 ## 📝 Descrição
