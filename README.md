@@ -1,4 +1,4 @@
-# Bloco de Notas Dark - Versão Responsiva
+# Bloco de Notas Dark 
 
 ![Preview](Minimalist_3D_Notebook_Icon_On_Soft_Peach_And_Blue_Background-removebg-preview.png)  
 *Uma aplicação minimalista para registrar suas ideias com estilo!*
