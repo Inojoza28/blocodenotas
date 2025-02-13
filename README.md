@@ -1,6 +1,6 @@
 # Bloco de Notas Dark 
 
-![Preview](preview/tela01.png)  
+![Preview](preview/Tela01.png)  
 *Uma aplicação minimalista para registrar suas ideias com estilo!*
 
 ## 📝 Descrição
