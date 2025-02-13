@@ -88,7 +88,7 @@
  textarea {
     display: block;
     width: 100%;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 140px);
     background: linear-gradient(145deg, var(--bg-primary), hsl(240, 5%, 14%));
     color: var(--text-primary);
     border: none;
@@ -121,6 +121,78 @@
   textarea::-webkit-scrollbar-thumb {
     background: var(--accent);
     border-radius: 4px;
+  }
+
+  /* Footer Minimalista */
+footer {
+    background: #151515;
+    border-top: 1px solid hsla(0, 0%, 100%, 0.08);
+    padding: 1.5rem 2rem;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9em;
+    color: var(--text-secondary);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  
+  .footer-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  footer a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  footer a:hover {
+    color: var(--accent);
+    transform: translateY(-1px);
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 1.25rem;
+  }
+  
+  /* Responsividade do Footer */
+  @media (max-width: 768px) {
+    footer {
+      padding: 1rem;
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .footer-content {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .footer-social {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    footer {
+      font-size: 0.85em;
+    }
+    
+    .footer-social {
+      gap: 1rem;
+    }
   }
 
   /* Responsividade: em telas pequenas, exibe o menu hambúrguer e oculta a toolbar com animação */
