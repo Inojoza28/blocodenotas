@@ -1,0 +1,133 @@
+ /* Reset e configurações básicas */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  /* Cabeçalho e layout da toolbar */
+  header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #333;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  /* Container para logo e título */
+  .header-left {
+    display: flex;
+    align-items: center;
+    margin-left: 4px;
+  }
+  .logo {
+    height: 40px;
+    margin-right: 10px;
+  }
+  header h1 {
+    font-size: 1.7em;
+  }
+  /* Botão de menu (hambúrguer) - visível apenas em telas pequenas */
+  #menuToggleBtn {
+    display: none;
+    background: none;
+    border: none;
+    color: #e0e0e0;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  /* Toolbar com os botões das funções (desktop) */
+  .toolbar {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .toolbar button {
+    background-color: #333;
+    border: none;
+    color: #e0e0e0;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .toolbar button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+  }
+  /* Área principal */
+  main {
+    flex: 1;
+    padding: 10px;
+    overflow: auto;
+  }
+  /* Estilo do textarea */
+  textarea {
+    width: calc(100% - 80px);
+    margin: 0 auto;
+    height: calc(100vh - 100px); /* Considera a altura do header */
+    background-color: #121212;
+    color: #e0e0e0;
+    border: none;
+    resize: none;
+    outline: none;
+    padding: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    transition: font-size 0.2s;
+  }
+  /* Responsividade: em telas pequenas, exibe o menu hambúrguer e oculta a toolbar com animação */
+  @media (max-width: 600px) {
+    /* Exibe o botão de menu */
+    #menuToggleBtn {
+      display: block;
+    }
+    /* Ajusta o cabeçalho e o título */
+    header h1 {
+      font-size: 1.5em;
+    }
+    /* Toolbar como menu suspenso com animação */
+    .toolbar {
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      right: 10px;
+      background-color: #1e1e1e;
+      border: 1px solid #333;
+      padding: 10px;
+      border-radius: 4px;
+      gap: 10px;
+      z-index: 100;
+      transform: scaleY(0);
+      transform-origin: top;
+      opacity: 0;
+      visibility: hidden;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .toolbar.active {
+      transform: scaleY(1);
+      opacity: 1;
+      visibility: visible;
+    }
+    .toolbar button {
+      font-size: 0.9em;
+      padding: 12px 10px;
+    }
+    textarea {
+      font-size: 16px;
+    }
+  }
