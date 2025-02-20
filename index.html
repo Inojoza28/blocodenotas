@@ -2,25 +2,21 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="description"
-        content="Bloco de Notas Dark - Uma aplicação minimalista, responsiva e intuitiva para registrar suas ideias com facilidade.">
+    <meta name="description" content="Bloco de Notas Dark - Uma aplicação minimalista, responsiva e intuitiva para registrar suas ideias com facilidade.">
     <meta name="author" content="Gabriel Inojoza">
     <meta name="keywords" content="bloco de notas, dark mode, responsividade, minimalista, produtividade, notas, ideias">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="imgs/Logo.png">
     <title>Bloco de Notas Dark</title>
-    <!-- Importando a fonte Roboto -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <!-- Importando Font Awesome para os ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <header id="header">
         <div class="header-left">
-            <!-- Substitua "logo.png" pelo caminho da sua logo -->
+            <!-- Substitua "Logo.png" pelo caminho da sua logo -->
             <img src="imgs/Logo.png" alt="Logo" class="logo">
             <h1>Meu Bloco de Notas</h1>
         </div>
@@ -53,6 +49,10 @@
     <main>
         <textarea id="notepad" placeholder="Digite suas ideias aqui..."></textarea>
     </main>
+    <!-- Botão para restaurar o header/toolbar (aparece no modo foco) -->
+    <button id="showToolbarBtn" title="Mostrar Toolbar" aria-label="Mostrar Toolbar" style="display: none;">
+        <i class="fas fa-eye"></i>
+    </button>
     <footer>
         <div class="footer-content">
             <p>&copy; 2024 Bloco de Notas Dark. Todos os direitos reservados.</p>
@@ -68,5 +68,4 @@
     </footer>
     <script src="script.js" defer></script>
 </body>
-
 </html>
